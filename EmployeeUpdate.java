@@ -5,12 +5,12 @@ class Employee {
 	private int id;
 	private String name;
 	private String address;
-	private float contact;
+	private long contact;
     private String email;
     private String job_position;
 	private double rate;
 	
-	public Employee(final int id, final String name, final String address, final int contact, final String email, final String job_position, final double rate) {
+	public Employee(final int id, final String name, final String address, final long contact, final String email, final String job_position, final double rate) {
 		this.id = id;
 		this.name = ucfirst(name);
 		this.address = ucfirst(address);
@@ -28,7 +28,7 @@ class Employee {
 		this.address = ucfirst(address);
 	}
 
-	public void setContact(final int contact) {
+	public void setContact(final long contact) {
 		this.contact = contact;
 	}
 
@@ -56,7 +56,7 @@ class Employee {
     	return address;
     }
 
-     public float getContact() {
+     public long getContact() {
     	return contact;
     }
 
@@ -147,7 +147,7 @@ class Test {
         final String address = scan.nextLine();
 
         System.out.print("Enter Contact: ");
-        final int contact = Integer.parseInt(scan.nextLine());
+        final long contact = Long.parseLong(scan.nextLine());
 
         System.out.println("Enter Email: ");
         final String email = scan.nextLine();
@@ -210,12 +210,12 @@ class Test {
 		System.out.println("List of Employees:");
 		for (final Employee employee : employees) {
 			System.out.println("ID: " + employee.getID() + 
-			", Name: " + employee.getName() + 
-			",\nAddress: " + employee.getAddress() + 
-			",\nContact: " + employee.getContact() +
-			",\nEmail: " + employee.getEmail() +
-			",\nJob Position: " + employee.getJobPosition() +
-			",\nRate: " + employee.getRate());
+			"\nName: " + employee.getName() + 
+			"\nAddress: " + employee.getAddress() + 
+			"\nContact: " + employee.getContact() +
+			"\nEmail: " + employee.getEmail() +
+			"\nJob Position: " + employee.getJobPosition() +
+			"\nRate: " + employee.getRate());
 		}
 	}
 }
