@@ -1,1 +1,1 @@
-Jabez DC. BISMANOS
+Jabez DC. Bismanos
